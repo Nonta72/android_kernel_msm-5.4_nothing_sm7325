@@ -1044,6 +1044,10 @@ KBUILD_CFLAGS += $(call cc-option, -Wno-error=unused-function)
 # disable -Wunused-variable
 KBUILD_CFLAGS += $(call cc-option, -Wno-error=unused-variable)
 
+# disable -Wunused-result
+KBUILD_CFLAGS += $(call cc-option, -Wno-error=unused-result)
+KBUILD_CFLAGS += $(call cc-disable-warning, unused-result)
+
 # disable invalid "can't wrap" optimizations for signed / pointers
 KBUILD_CFLAGS	+= $(call cc-option,-fno-strict-overflow)
 
